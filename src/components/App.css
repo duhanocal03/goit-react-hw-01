@@ -75,3 +75,60 @@ body{
   font-size: 18px;
   color: #000;
 }
+
+
+.friend-cards ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 20px 20px;
+}
+
+.friend-cards li{
+  margin-right: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  color: #000;
+  list-style: none;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status.online {
+  color: green !important;
+}
+
+.status.offline {
+  color: red !important;
+}
+
+
+.transaction-history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transaction-history th {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.transaction-history td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.transaction-history tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
