@@ -1,49 +1,36 @@
 import "./App.css";
+import "./css/friends.css";
+import "./css/profile.css";
+import "./css/transactionhhistory.css";
 import userData from "../userData.json";
+import Profile from "../components/Profile/profile.jsx";
 import friends from "../Friends.json";
-import transactions from "../Transactions.json"
-import FriendList from "../components/FriendList";
-import TransactionHistory from "./TransactionHistory";
+import transactions from "../Transactions.json";
+import FriendList from "../components/FriendList/FriendList.jsx";
+import TransactionHistory from "../components/TransactionHistory/TransactionHistory.jsx";
 
 function App() {
-  const { username, tag, location, avatar, stats } = userData;
-
   return (
     <>
-      {/* 1. ödev */}
-      <div className="profile">
-        <div className="description">
-          <img src={avatar} alt="User avatar" className="avatar" />
-          <p className="name">{username}</p>
-          <p className="tag">@{tag}</p>
-          <p className="location">{location}</p>
-        </div>
-
-        <ul className="stats">
-          <li>
-            <span className="label">Followers</span>
-            <span className="value">{stats.followers}</span>
-          </li>
-          <li>
-            <span className="label">Views</span>
-            <span className="value">{stats.views}</span>
-          </li>
-          <li>
-            <span className="label">Likes</span>
-            <span className="value">{stats.likes}</span>
-          </li>
-        </ul>
-      </div>
+      {/* 1.ödev */}
+       <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+      {/* 1.ödev bitiş */}
 
       {/* 2. ödev */}
       <div className="friend-cards">
         <FriendList friends={friends} />
       </div>
+      {/* 2. ödev bitiş */}
 
       {/*3.ödev*/}
-      
       <TransactionHistory items={transactions} />    
-      
+      {/* 3.ödev bitiş */}
     </>
   );
 }
