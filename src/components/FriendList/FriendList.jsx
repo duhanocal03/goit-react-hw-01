@@ -1,11 +1,11 @@
-import FriendListItem from "../FriendList/FriendListItem.jsx";
-import "../css/friends.css";
+import styles from "./friends.module.css";
+import FriendListItem from "./FriendListItem.jsx";
 
 export default function FriendList({ friends }) {
   return (
-      <ul>
+    <ul className={styles.friendList}>
       {friends.map((friend) => (
-        <li key={friend.id}>
+        <li key={friend.id} className={styles.item}>
           <FriendListItem
             avatar={friend.avatar}
             name={friend.name}

@@ -1,14 +1,4 @@
-.friend-cards ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 20px 20px;
-}
-
-.friend-cards li {
-    margin-right: 20px;
+.item{
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
@@ -27,4 +17,12 @@
 
 .status.offline {
     color: red !important;
+}
+
+.friendList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }

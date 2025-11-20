@@ -36,6 +36,8 @@
 
 .stats {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -45,6 +47,7 @@
 .stats li {
     flex: 1;
     text-align: center;
+    flex-direction: column;
     padding: 15px 0;
     border-top: 2px solid #ccc;
     border-right: 2px solid #ccc;
@@ -67,4 +70,16 @@
     font-weight: bold;
     font-size: 18px;
     color: #000;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.statsValue{
+    font-weight: bold;
 }
